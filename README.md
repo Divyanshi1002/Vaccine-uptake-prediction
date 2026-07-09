@@ -1,31 +1,83 @@
-# Divyanshi_kanwar_DataHack
+# Vaccine Uptake Prediction
 
-## Problem statement
-Your goal is to predict how likely individuals are to receive their xyz and seasonal flu
-vaccines. Specifically, you'll be predicting two probabilities: one for xyz_vaccine and
-one for seasonal_vaccine.
+## Overview
 
-## Submission format
-The format for the submission file is three columns: respondent_id, xyz_vaccine,
-and seasonal_vaccine. The predictions for the two target variables should be float
-probabilities that range between 0.0 and 1.0. Because the competition uses ROC
-AUC as its evaluation metric, the values you submit must be the probabilities that a
-person received each vaccine, not binary labels. As this is a multilabel problem, the
-probabilities for each row do not need to sum to one.
+This project predicts whether individuals are likely to receive the seasonal influenza vaccine and the H1N1 vaccine using demographic, behavioral, and health-related survey data.
 
-## My Implemtation
-- Handled missing value from the dataset:
-    - dropped columns containing more than 50% missing value.
-    - used mean for numarical data.
-    - used most frequent (mode) for categorical data.
+The objective is to build predictive models that can support targeted public health interventions and improve vaccination outreach strategies.
 
-- Defined models:
-   - Logistic Regression: for predicting probabilities in binary classification tasks.
-   - MultiOutputClassifier:the problem involves predicting probabilities for multiple labels 
+---
 
-- Performed Cross-Validation
-   - ROC AUC score is used to quantify the model's ability to rank predicted probabilities correctly.
+## Dataset
 
-- Calculated the Mean Cross-Validation Score
-  
+- Training Features
+- Training Labels
+- Test Features
 
+The dataset contains:
+
+- Demographic information
+- Medical history
+- Preventive health behaviors
+- Risk perception
+- Healthcare access
+- Vaccination history
+
+---
+
+## Workflow
+
+- Data Cleaning
+- Missing Value Imputation
+- Exploratory Data Analysis
+- Feature Engineering
+- Categorical Encoding
+- Model Training
+- Model Evaluation
+- Prediction
+
+---
+
+## Models
+
+- Logistic Regression
+- Random Forest
+- XGBoost
+
+---
+
+## Evaluation Metrics
+
+- ROC-AUC
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+
+---
+
+## Technologies
+
+- Python
+- Pandas
+- NumPy
+- Scikit-learn
+- XGBoost
+- Matplotlib
+- Seaborn
+
+---
+
+## Key Insights
+
+- Behavioral and healthcare access variables strongly influence vaccination uptake.
+- Tree-based models captured nonlinear relationships better than baseline models.
+- Feature importance analysis highlighted the major drivers of vaccine acceptance.
+
+---
+
+## Future Improvements
+
+- Hyperparameter optimization
+- Explainability using SHAP
+- Model deployment using Streamlit or FastAPI
